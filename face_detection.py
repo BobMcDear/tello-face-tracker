@@ -48,10 +48,8 @@ def get_faces(
         norm_stats,
         )
 
-
     net.setInput(blob)
     faces = net.forward()
-
 
     results = [(0, 0, 0, 0, 0)]
     for i in range(faces.shape[2]):
