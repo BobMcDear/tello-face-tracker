@@ -36,7 +36,9 @@ def get_faces(
         image (array): An image to find faces in
     
     Returns (List[Tuple[int, int, int, int, float]]): A List containing Tuples
-    of face coordinates. The results always starts with (0, 0, 0, 0, 0)
+    of face coordinates (top-left X, top-left Y, bottom-right X, bottom-right 
+    Y). The results always starts with 
+    (0, 0, 0, 0, 0)
     """
     height, width = image.shape[:2]
     norm_stats = (104.0, 117.0, 123.0)
@@ -80,7 +82,8 @@ def get_most_confident_face(
         image (array): An image to find faces in
     
     Returns (Tuple[int, int, int, int]): A Tuple containing the coordinates of
-    the face with the highest associated confidence
+    the face (top-left X, top-left Y, bottom-right X, bottom-right Y) with the
+    highest associated confidence
     """
     faces = get_faces(
         net=net, 
