@@ -2,7 +2,7 @@ from typing import List, Tuple
 
 from cv2 import dnn_Net
 from cv2.dnn import blobFromImage, readNetFromCaffe
-from numpy import array
+from numpy import array, squeeze
 
 
 def get_caffe_net(
@@ -51,11 +51,15 @@ def get_faces(
     net.setInput(blob)
     faces = net.forward()
 
+    faces = squeeze(faces, axis=(0, 1))
+    faces = faces[:, 2:]
+
     results = [(0, 0, 0, 0, 0)]
-    for i in range(faces.shape[2]):
-        confidence = faces[0, 0, i, 2]
+    for i in range(len(faces)):
+        curr_face = faces[i]
+        confidence = curr_face[0]
         if 0.75 <= confidence:
-            face = faces[0, 0, i, 3:7] * array([width, height, width, height])
+            face = curr_face[1:] * array([width, height, width, height])
             face = face.astype('int')
             
             result = (*face, confidence)
