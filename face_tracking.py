@@ -156,6 +156,10 @@ class FaceTracker:
         ) -> None:
         """
         Sets up the drone and face detection network
+
+        Args:
+            net (dnn_Net): A dnn_Net that detects faces
+            image (array): An image to find faces in
         """
         self.tello = Tello()
 
