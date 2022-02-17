@@ -158,8 +158,10 @@ class FaceTracker:
         Sets up the drone and face detection network
 
         Args:
-            net (dnn_Net): A dnn_Net that detects faces
-            image (array): An image to find faces in
+            proto_file (str): Path to the model proto file.
+            Default is 'deploy.prototxt.txt'
+            model_file (str): Path to the model file.
+            Default is 'res10_300x300_ssd_iter_140000.caffemodel'
         """
         self.tello = Tello()
 
