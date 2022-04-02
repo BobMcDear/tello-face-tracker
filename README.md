@@ -15,7 +15,7 @@ Example:
 python main.py --model_file res10_300x300_ssd_iter_140000.caffemodel --proto_file deploy.prototxt.txt
 ```
 
-The modules may also be used out-of-the-box. They include,
+The implemented modules may also be used out-of-the-box. They include,
 
 * ```face_detection.py```: 
   * ```get_caffe_net```: Reads a Caffe network with OpenCV
