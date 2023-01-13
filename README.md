@@ -1,3 +1,5 @@
+<i>This is not a fork of somebody else's code. I, [@BobMcDear](https://github.com/BobMcDear), am the original creator of this project but due to problems with Git was forced to delete and restore it. In other words, [maciektbt4/Tello-Face-Tracker](https://github.com/maciektbt4/Tello-Face-Tracker) is a fork of this repository and not vice versa.</i>
+
 # Tello-Face-Tracker
 
 ## Description
