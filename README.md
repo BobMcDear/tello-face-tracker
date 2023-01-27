@@ -3,7 +3,7 @@
 # Tello-Face-Tracker
 
 ## Description
-This is an implementation of a face tracker for the Ryze Tello drone. You can find the accompanying blog [here](https://borna-ahz.medium.com/face-tracking-with-the-ryze-tello-part-1-face-detection-75ec97b1d8d2).
+This is an implementation of a face tracker for the Ryze Tello drone.
 
 ## Usage
 To run the face tracker, you must first download [the Caffe model](https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20180205_fp16/res10_300x300_ssd_iter_140000_fp16.caffemodel) for face detection and [its associated text description](https://github.com/opencv/opencv/blob/master/samples/dnn/face_detector/deploy.prototxt).
